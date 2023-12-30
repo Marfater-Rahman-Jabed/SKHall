@@ -1,0 +1,60 @@
+.cardss {
+    /* width: 400px;
+    height: 300px; */
+    position: relative;
+    /* margin: 0 1%; */
+
+    background-size: cover;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: #000 0px 5px 12px 0px;
+}
+
+.cardss .overlays {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(75, 194, 241);
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.cardss:hover .overlays {
+    opacity: 1;
+}
+
+.cardss .btns {
+    padding: 0.6em 1.3em;
+    text-decoration: none;
+    color: #fff;
+    background: orange;
+    border: 2px #ffffff solid;
+    letter-spacing: 1px;
+    border-radius: 8px;
+
+}
+
+.cardss .btns:hover {
+    background: orangered;
+
+}
+
+
+.cardss .btns,
+.cardss h3 {
+    transition: 0.3s;
+    transform: translateY(-20px);
+
+}
+
+.cardss:hover .btns,
+.cardss:hover h3 {
+    transform: translateY(0);
+}
