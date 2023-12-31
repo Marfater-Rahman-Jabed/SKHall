@@ -1,9 +1,10 @@
+import RoomView from '@/app/Component/RoomView/RoomView';
 import React from 'react';
 
 const page = () => {
     return (
         <div>
-            this is view Room page
+            <RoomView></RoomView>
         </div>
     );
 };

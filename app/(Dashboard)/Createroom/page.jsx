@@ -1,9 +1,13 @@
+import CreateNewRoom from '@/app/Component/CreateNewRoom/CreateNewRoom';
 import React from 'react';
 
 const Page = () => {
     return (
         <div>
-            <h2>this is create room</h2>
+
+            <div className=''>
+                <CreateNewRoom></CreateNewRoom>
+            </div>
         </div>
     );
 };

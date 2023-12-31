@@ -21,7 +21,7 @@ const SeatAllocationForm = () => {
 
                         </div>
                         <select className="select select-info w-full" placeholder='Room Number'>
-                            <option disabled selected>Select Room Number</option>
+                            <option disabled defaultValue={''}>Select Room Number</option>
                             <option>101</option>
                             <option>102</option>
                             <option>201</option>
@@ -40,7 +40,7 @@ const SeatAllocationForm = () => {
 
                         </div>
                         <select className="select select-info w-full" placeholder='Seat Number'>
-                            <option disabled selected>Select Seat Number</option>
+                            <option disabled defaultValue={''}>Select Seat Number</option>
                             <option>W-1</option>
                             <option>1-W</option>
                             <option>W-2</option>
@@ -98,7 +98,7 @@ const SeatAllocationForm = () => {
 
                         </div>
                         <select className="select select-info w-full" placeholder='Blood Group'>
-                            <option disabled selected>Blood Group</option>
+                            <option disabled defaultValue={''}>Blood Group</option>
                             <option>A+</option>
                             <option>A-</option>
                             <option>B+</option>

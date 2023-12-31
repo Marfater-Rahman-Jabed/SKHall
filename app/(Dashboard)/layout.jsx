@@ -1,25 +1,30 @@
+'use client'
 import Link from "next/link";
 import NavBar from "../Component/NavBar/NavBar";
+import { usePathname } from "next/navigation";
+
 
 const DashBoardlayout = ({ children }) => {
+    const pathname = usePathname()
+
     return (
         <section className="">
             <NavBar></NavBar>
-            <div className="container flex ">
-                <div className=" border-gray-200 pr-12 py-4">
-                    <nav className="flex flex-col bg-sky-400 min-h-screen w-60 rounded-tr-lg px-6">
+            <div className=" flex ">
+                <div className="  pr-6 pt-2">
+                    <nav className="flex flex-col bg-sky-400 min-h-full w-60 rounded-tr-lg px-6">
                         <ul role="list" className="flex flex-1 flex-col gap-y-8 text-start ">
 
-                            <Link href={'/RoomList'} className="mt-10 w-44 border-2 border-solid border-black py-1 rounded-md ">
+                            <Link href={'/RoomList'} className={`mt-10 w-44 border-2 border-solid border-black py-1 rounded-md ${pathname.startsWith("/RoomList") ? "bg-white border-white" : "border-black"}`}>
                                 <li className=" px-3  ">Room List</li>
                             </Link>
-                            <Link href={'/AllocateSeat'} className=" w-44 border-2 border-solid border-black py-1 rounded-md ">
+                            <Link href={'/AllocateSeat'} className={` w-44 border-2 border-solid border-black py-1 rounded-md ${pathname.startsWith("/AllocateSeat") ? "bg-white border-white" : "border-black"}`}>
                                 <li className=" px-3  ">Allocate Seat</li>
                             </Link>
-                            <Link href={'/ViewRoom'} className=" w-44 border-2 border-solid border-black py-1 rounded-md ">
+                            <Link href={'/ViewRoom'} className={` w-44 border-2 border-solid border-black py-1 rounded-md ${pathname.startsWith("/ViewRoom") ? "bg-white border-white" : "border-black"}`}>
                                 <li className=" px-3  ">View Room</li>
                             </Link>
-                            <Link href={'/Createroom'} className=" w-44 border-2 border-solid border-black py-1 rounded-md ">
+                            <Link href={'/Createroom'} className={` w-44 border-2 border-solid border-black py-1 rounded-md ${pathname.startsWith("/Createroom") ? "bg-white border-white" : "border-black"}`}>
                                 <li className=" px-3  ">Create New Room</li>
                             </Link>
                             <div className="bg-white py-[1px] w-44">
