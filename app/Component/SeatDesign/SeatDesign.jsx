@@ -1,82 +1,34 @@
-"use client"
 import React from 'react';
-import { IoIosSearch } from "react-icons/io";
 import defaultLogo from '@/app/Assets/coulogo.jpeg'
 import Image from 'next/image';
-const StudentFind = () => {
+const SeatDesign = () => {
     return (
-        <div className=''>
-            <div className='flex justify-between gap-8 px-16'>
-                <label className="form-control w-full max-w-sm">
+        <div className='py-6' >
+            <div className='flex flex-col cursor-pointer' onClick={() => document.getElementById('AllocateModal').showModal()}>
+                <div className='w-[100px] h-[12px] mx-auto rounded-b-2xl ' style={{ backgroundColor: 'rgba(11, 147, 82, 1)' }}>
 
-                    <input type="text" placeholder="Student's Name" className="input input-bordered input-info w-full max-w-sm " />
-
-                </label>
-                <label className="form-control w-36">
-
-                    <input type="text" placeholder="Department" className="input input-bordered input-info w-36" />
-
-                </label>
-                <label className="form-control w-36">
-
-                    <input type="text" placeholder="Session" className="input input-bordered input-info w-36" />
-
-                </label>
-                <label className="form-control w-full max-w-sm">
-
-                    <input type="text" placeholder="Sheikh Hasina Hall" className="input input-bordered input-info w-full max-w-sm" />
-
-                </label>
-                <div className='btn bg-black hover:bg-black text-white px-10'>
-                    <button className='px-2'>Search</button>
-                    <IoIosSearch className='text-xl'></IoIosSearch>
                 </div>
-            </div>
-            <div className='py-16'>
-                <div className="overflow-x-auto">
-                    <table className="table table-zebra">
-                        {/* head */}
-                        <thead>
-                            <tr className='bg-sky-300  text-black'>
+                <div className='w-[90px] h-[149px] mx-auto -mt-1' style={{ backgroundColor: 'rgba(11, 147, 82, 1)' }}>
 
-                                <th className='border-4 border-white'>Students Name</th>
-                                <th className='border-4 border-white'>Department</th>
-                                <th className='border-4 border-white'>Session</th>
-                                <th className='border-4 border-white'>ID</th>
-                                <th className='border-4 border-white'>Hall Name</th>
-                                <th className='border-4 border-white'>Room No</th>
-                                <th className='border-4 border-white'>Details</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {/* row 1 */}
-                            <tr className='bg-purple-200 text-black'>
+                    <h2 className='text-center text-white font-semibold py-4'>1-W</h2>
+                </div>
+                <div className='w-[100px] h-[12px] mx-auto -mt-1  rounded-t-2xl' style={{ backgroundColor: 'rgba(11, 147, 82, 1)' }}>
 
-                                <td className='border-4 border-white'>ABC</td>
-                                <td className='border-4 border-white'>ICT</td>
-                                <td className='border-4 border-white'>2019-20</td>
-                                <td className='border-4 border-white'>12009000</td>
-                                <td className='border-4 border-white'>Sheikh Hasina Hall</td>
-                                <td className='border-4 border-white'>101</td>
-                                <td className='border-4 border-white text-blue-500'><button className="" onClick={() => document.getElementById('my_modal_2').showModal()}>Click</button></td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
                 </div>
             </div>
 
-            {/* Open the modal using document.getElementById('ID').showModal() method */}
 
-            <dialog id="my_modal_2" className="modal">
+
+
+            <dialog id="AllocateModal" className="modal">
                 <div className="modal-box  w-4/5 max-w-3xl h-full">
+                    <h3 className='text-info pb-3 font-semibold'>Sheikh Hasina Hall | Room-104 | Seat-A</h3>
                     <div className='flex justify-center items-end gap-20 pb-4'>
                         <div >
                             <Image src={defaultLogo}
                                 height={150}
                                 width={150}
-                                alt='cou'
+                                alt='coulogo'
                             ></Image>
 
                         </div>
@@ -199,9 +151,11 @@ const StudentFind = () => {
 
                         </label>
                     </div>
-                    <div className='modal-action flex justify-center'>
-                        <form method="dialog" >
-                            <button className=" w-[136px] h-[40px]  bg-black rounded-md px-10 hover:bg-black text-white">Close</button>
+                    <div className="modal-action flex justify-center">
+                        <form method="dialog" className='flex justify-center gap-8'>
+                            {/* if there is a button in form, it will close the modal */}
+                            <button className=" w-[136px] h-[40px]  bg-sky-400 rounded-md px-10 hover:bg-sky-400">Close</button>
+                            <button className="w-[145px] h-[40px] rounded-md bg-black hover:bg-black text-white ">Cancel Allocation</button>
                         </form>
                     </div>
                 </div>
@@ -213,4 +167,4 @@ const StudentFind = () => {
     );
 };
 
-export default StudentFind;
+export default SeatDesign;

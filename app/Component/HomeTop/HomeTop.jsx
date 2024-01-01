@@ -25,7 +25,7 @@ const HomeTop = () => {
                         <Image
                             src={logo}
                             height={160}
-
+                            alt='coulogo'
                         ></Image>
                     </div>
                     <div>

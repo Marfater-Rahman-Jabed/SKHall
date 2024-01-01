@@ -2,6 +2,8 @@
 import React from 'react';
 import { IoIosSearch } from 'react-icons/io';
 import { MdCheckBoxOutlineBlank } from "react-icons/md";
+import SeatDesign from '../SeatDesign/SeatDesign';
+import SeatDesignYellow from '../SeatDesignYellow/SeatDesignYellow';
 
 const RoomView = () => {
     return (
@@ -11,20 +13,14 @@ const RoomView = () => {
                     <label className="form-control w-[400px] ">
 
 
-                        <select className="select select-info w-[400px]" placeholder='Room Number'>
-                            <option disabled selected>Room Number</option>
-                            <option>101</option>
-                            <option>102</option>
-                            <option>201</option>
-                            <option>202</option>
-                            <option>301</option>
-                            <option>302</option>
-                            <option>401</option>
-                            <option>402</option>
+                        <input className='input input-bordered input-info' placeholder="Room Number" />
 
+                        {/* <datalist id="options" className="w-[400px]">
 
-
-                        </select>
+                            <option>English</option>
+                            <option>Japanese</option>
+                            <option>Italian</option>
+                        </datalist> */}
 
                     </label>
                     <div className='btn bg-black hover:bg-black text-white px-10'>
@@ -36,7 +32,24 @@ const RoomView = () => {
 
 
                 <div className=' pb-16'>
-                    <div className='border-2 border-solid rounded-lg border-sky-700  w-[780px] h-[490px] '>
+                    <div className='border-2 border-solid rounded-lg border-sky-700  w-[780px] h-[490px] grid grid-cols-2'>
+
+                        <div className='flex justify-center gap-1'>
+                            <SeatDesign></SeatDesign>
+                            <SeatDesignYellow></SeatDesignYellow>
+                        </div>
+                        <div className='flex justify-center gap-1'>
+                            <SeatDesign></SeatDesign>
+                            <SeatDesignYellow></SeatDesignYellow>
+                        </div>
+                        <div className='flex justify-center gap-1'>
+                            <SeatDesign></SeatDesign>
+                            {/* <SeatDesignYellow></SeatDesignYellow> */}
+                        </div>
+                        <div className='flex justify-center gap-1'>
+                            <SeatDesign></SeatDesign>
+                            {/* <SeatDesignYellow></SeatDesignYellow> */}
+                        </div>
 
                     </div>
                     <div className='flex justify-center py-3'>
