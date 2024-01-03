@@ -23,7 +23,7 @@ const RoomList = () => {
                     <tbody>
 
                         {
-                            newArray.map((ele, i) => <tr className="bg-purple-200 text-black" key={i}>
+                            newArray.map((ele, i) => <tr style={{ backgroundColor: '#EBEBEB' }} className=" text-black" key={i}>
 
                                 <td className='border-4 h-[8px] border-white'>101</td>
                                 <td className='border-4 h-[8px] border-white'>4</td>

@@ -22,8 +22,8 @@ const SeatAllocationForm = () => {
                         <span className="label-text font-semibold text-info">Hall Name</span>
 
                     </div>
-                    <input id="hallName" type="text" placeholder="Type here" className={`input input-bordered ${errors.hallName ? 'input-error' : 'input-info'}  w-full`} {...register("hallName", { required: true })} />
-                    {errors.hallName && errors.hallName.type === "required" && <span className='text-error'>This is required</span>}
+                    <input id="hallName" type="text" value={'Sheikh Hasina Hall'} placeholder="Type here" className={`input input-bordered ${errors.hallName ? 'input-error' : 'input-info'}  w-full`} {...register("hallName", { required: true })} readOnly />
+                    {errors.hallName && errors.hallName.type === "required" && <span className='text-error'>Hall name required</span>}
                 </label>
                 <div className='grid grid-cols-2 gap-20'>
                     <label className="form-control w-full ">
@@ -71,16 +71,16 @@ const SeatAllocationForm = () => {
                             <span className="label-text font-semibold text-info">Student Name</span>
 
                         </div>
-                        <input id="studentName" type="text" placeholder="Type here" className={`input input-bordered ${errors.studentName ? 'input-error' : 'input-info'}  w-full`} {...register("studentName", { required: true })} />
-                        {errors.studentName && errors.studentName.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="studentName" type="text" placeholder="Student Name" className={`input input-bordered ${errors.studentName ? 'input-error' : 'input-info'}  w-full`} {...register("studentName", { required: true })} />
+                        {errors.studentName && errors.studentName.type === "required" && <span className='text-error'>Student Name required</span>}
                     </label>
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text font-semibold text-info">Date Of Birth</span>
 
                         </div>
-                        <input id="dateOfBirth" type="date" placeholder="Type here" className={`input input-bordered ${errors.dateOfBirth ? 'input-error' : 'input-info'}  w-full`} {...register("dateOfBirth", { required: true })} />
-                        {errors.dateOfBirth && errors.dateOfBirth.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="dateOfBirth" type="date" placeholder="Date Of Birth" className={`input input-bordered ${errors.dateOfBirth ? 'input-error' : 'input-info'}  w-full`} {...register("dateOfBirth", { required: true })} />
+                        {errors.dateOfBirth && errors.dateOfBirth.type === "required" && <span className='text-error'>Date of Birth required</span>}
                     </label>
                 </div>
                 <label className="form-control w-full ">
@@ -88,8 +88,8 @@ const SeatAllocationForm = () => {
                         <span className="label-text font-semibold text-info">Students Permanent Address</span>
 
                     </div>
-                    <input id="studentPermanentAddress" type="text" placeholder="Type here" className={`input input-bordered ${errors.studentPermanentAddress ? 'input-error' : 'input-info'}  w-full`} {...register("studentPermanentAddress", { required: true })} />
-                    {errors.studentPermanentAddress && errors.studentPermanentAddress.type === "required" && <span className='text-error'>This is required</span>}
+                    <input id="studentPermanentAddress" type="text" placeholder="Students Permanent Address" className={`input input-bordered ${errors.studentPermanentAddress ? 'input-error' : 'input-info'}  w-full`} {...register("studentPermanentAddress", { required: true })} />
+                    {errors.studentPermanentAddress && errors.studentPermanentAddress.type === "required" && <span className='text-error'>Students Permanent Address required</span>}
                 </label>
                 <div className='grid grid-cols-2 gap-20'>
                     <label className="form-control w-full ">
@@ -97,11 +97,11 @@ const SeatAllocationForm = () => {
                             <span className="label-text font-semibold text-info">Student Image</span>
 
                         </div>
-                        <div className='flex justify-between gap-2'>
-                            <input id="image" type="file" placeholder="Image" className={`file-input file-input-bordered ${errors.image ? 'file-input-error' : 'file-input-info'}  w-full`} onChange={handleFileChange} {...register("image", { required: true })} accept='image/*' />
-                            <button type='button' className='btn btn-md btn-info' onClick={() => document.querySelector('input[type="file"]').click()}>Browse</button>
-                        </div>
-                        {errors.image && errors.image.type === "required" && <span className='text-error'>This is required</span>}
+
+                        <input id="image" type="file" placeholder="Image" className={`file-input file-input-bordered ${errors.image ? 'file-input-error' : 'file-input-info'}  w-full`} onChange={handleFileChange} {...register("image", { required: true })} accept='image/*' />
+
+
+                        {errors.image && errors.image.type === "required" && <span className='text-error'>Student Image required</span>}
 
                     </label>
                     <label className="form-control w-full ">
@@ -130,16 +130,16 @@ const SeatAllocationForm = () => {
                             <span className="label-text font-semibold text-info">Phone Number</span>
 
                         </div>
-                        <input id="phoneNumber" type="number" placeholder="Type here" className={`input input-bordered ${errors.phoneNumber ? 'input-error' : 'input-info'}  w-full`} {...register("phoneNumber", { required: true })} />
-                        {errors.phoneNumber && errors.phoneNumber.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="phoneNumber" type="number" placeholder="Phone Number" className={`input input-bordered ${errors.phoneNumber ? 'input-error' : 'input-info'}  w-full`} {...register("phoneNumber", { required: true })} />
+                        {errors.phoneNumber && errors.phoneNumber.type === "required" && <span className='text-error'>Phone Number required</span>}
                     </label>
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text font-semibold text-info">Special Skill</span>
 
                         </div>
-                        <input id="SpecialSkill" type="text" placeholder="Type here" className={`input input-bordered ${errors.SpecialSkill ? 'input-error' : 'input-info'}  w-full`} {...register("SpecialSkill", { required: true })} />
-                        {errors.SpecialSkill && errors.SpecialSkill.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="SpecialSkill" type="text" placeholder="Special Skill" className={`input input-bordered ${errors.SpecialSkill ? 'input-error' : 'input-info'}  w-full`} {...register("SpecialSkill", { required: true })} />
+                        {errors.SpecialSkill && errors.SpecialSkill.type === "required" && <span className='text-error'>Special Skill required</span>}
                     </label>
                 </div>
                 <div className='grid grid-cols-2 gap-20'>
@@ -148,16 +148,16 @@ const SeatAllocationForm = () => {
                             <span className="label-text font-semibold text-info">Department</span>
 
                         </div>
-                        <input id="department" type="text" placeholder="Type here" className={`input input-bordered ${errors.department ? 'input-error' : 'input-info'}  w-full`} {...register("department", { required: true })} />
-                        {errors.department && errors.department.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="department" type="text" placeholder="Department" className={`input input-bordered ${errors.department ? 'input-error' : 'input-info'}  w-full`} {...register("department", { required: true })} />
+                        {errors.department && errors.department.type === "required" && <span className='text-error'>Department required</span>}
                     </label>
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text font-semibold text-info">Session</span>
 
                         </div>
-                        <input id="session" type="text" placeholder="Type here" className={`input input-bordered ${errors.session ? 'input-error' : 'input-info'}  w-full`} {...register("session", { required: true })} />
-                        {errors.session && errors.session.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="session" type="text" placeholder="Session" className={`input input-bordered ${errors.session ? 'input-error' : 'input-info'}  w-full`} {...register("session", { required: true })} />
+                        {errors.session && errors.session.type === "required" && <span className='text-error'>Session required</span>}
                     </label>
                 </div>
                 <div className='grid grid-cols-2 gap-20'>
@@ -166,16 +166,16 @@ const SeatAllocationForm = () => {
                             <span className="label-text font-semibold text-info">Registration/ID</span>
 
                         </div>
-                        <input id="regId" type="text" placeholder="Type here" className={`input input-bordered ${errors.regId ? 'input-error' : 'input-info'}  w-full`} {...register("regId", { required: true })} />
-                        {errors.regId && errors.regId.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="regId" type="text" placeholder="Registration/ID" className={`input input-bordered ${errors.regId ? 'input-error' : 'input-info'}  w-full`} {...register("regId", { required: true })} />
+                        {errors.regId && errors.regId.type === "required" && <span className='text-error'>Registration/ID required</span>}
                     </label>
                     <label className="form-control w-full ">
                         <div className="label">
                             <span className="label-text font-semibold text-info">Date of Allocation</span>
 
                         </div>
-                        <input id="allocationDate" type="date" placeholder="Type here" className={`input input-bordered ${errors.allocationDate ? 'input-error' : 'input-info'}  w-full`} {...register("allocationDate", { required: true })} />
-                        {errors.allocationDate && errors.allocationDate.type === "required" && <span className='text-error'>This is required</span>}
+                        <input id="allocationDate" type="date" placeholder="Date of Allocation" className={`input input-bordered ${errors.allocationDate ? 'input-error' : 'input-info'}  w-full`} {...register("allocationDate", { required: true })} />
+                        {errors.allocationDate && errors.allocationDate.type === "required" && <span className='text-error'>Date of Allocation required</span>}
                     </label>
                 </div>
                 <div className='flex justify-center py-16 cursor-pointer' onClick={handleSubmit(onSubmit)}>

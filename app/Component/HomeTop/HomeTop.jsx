@@ -1,31 +1,25 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+
+import React from 'react';
 import Image from 'next/image'
 import logo from '../../Assets/coulogo.jpeg'
 import Cards from '../Cards/Cards';
 import SeatAllocationForm from '../SeatAllocationForm/SeatAllocationForm';
 import StudentFind from '../StudentFind/StudentFind';
-import Splash from '../Splash/Splash';
+
 const HomeTop = () => {
-    const [loading, setLoading] = useState(true)
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            // setCount('Timeout called!');
-            setLoading(false)
-        }, 1000);
-        return () => clearTimeout(timer);
-    }, []);
+
 
 
     return (
         <div>
-            {loading ? <Splash></Splash> : <div className='p-24'>
+            <div className='p-24'>
                 <div className='flex justify-center items-center gap-10'>
                     <div>
                         <Image
                             src={logo}
                             height={160}
                             alt='coulogo'
+                            placeholder='blur'
                         ></Image>
                     </div>
                     <div>
@@ -45,7 +39,7 @@ const HomeTop = () => {
                 <div className='py-10'>
                     <StudentFind></StudentFind>
                 </div>
-            </div>}
+            </div>
         </div>
     );
 };

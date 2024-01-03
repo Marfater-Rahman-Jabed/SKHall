@@ -13,14 +13,18 @@ const RoomView = () => {
                     <label className="form-control w-[400px] ">
 
 
-                        <input className='input input-bordered input-info' placeholder="Room Number" />
+                        <select className="select select-info w-full" placeholder='Room Number' >
+                            <option disabled defaultValue={''}>Select Room Number</option>
+                            <option value={'101'}>101</option>
+                            <option value={'102'}>102</option>
+                            <option value={'201'}>201</option>
+                            <option value={'202'}>202</option>
+                            <option value={'301'}>301</option>
+                            <option value={'302'}>302</option>
+                            <option value={'401'}>401</option>
+                            <option value={'402'}>402</option>
 
-                        {/* <datalist id="options" className="w-[400px]">
-
-                            <option>English</option>
-                            <option>Japanese</option>
-                            <option>Italian</option>
-                        </datalist> */}
+                        </select>
 
                     </label>
                     <div className='btn bg-black hover:bg-black text-white px-10'>
