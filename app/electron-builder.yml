@@ -1,0 +1,8 @@
+appId: com.example.girlnest
+productName: Sheikh Hasina Hall
+mac:
+  category: your.app.category
+win:
+  target: nsis
+linux:
+  target: AppImage
